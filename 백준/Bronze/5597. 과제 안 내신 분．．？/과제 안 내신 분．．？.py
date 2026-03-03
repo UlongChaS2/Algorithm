@@ -1,7 +1,10 @@
 import sys
 
-submitted = [int(sys.stdin.readline()) for _ in range(28)]
+all_students = set(range(1, 31))
 
-for i in range(1, 31):
-    if i not in submitted:
-        print(i)
+submitted = set(int(sys.stdin.readline()) for _ in range(28))
+
+missing = all_students - submitted
+
+for student in sorted(missing):
+    print(student)
