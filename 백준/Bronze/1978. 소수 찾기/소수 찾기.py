@@ -12,10 +12,4 @@ def is_prime(n):
 n = int(sys.stdin.readline())
 numbers = map(int, sys.stdin.readline().split())
 
-count = 0
-
-for num in numbers:
-    if is_prime(num):
-        count += 1
-        
-print(count)
+print(sum(1 for x in numbers if is_prime(x)))
