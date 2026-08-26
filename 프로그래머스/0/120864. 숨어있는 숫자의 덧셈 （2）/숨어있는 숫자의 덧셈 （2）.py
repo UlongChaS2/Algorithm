@@ -1,16 +1,3 @@
 def solution(my_string):
-    total = 0
-    num_part = ""
+    return sum(int(num_str) for num_str in "".join(ch if ch.isdigit() else " " for ch in my_string).split())
     
-    for i in range(len(my_string)):
-        if my_string[i].isdigit():
-                num_part += my_string[i]
-        else:
-            if num_part:
-                total += int(num_part)
-                num_part = ""
-                
-    if num_part:
-        total += int(num_part)
-        
-    return total
