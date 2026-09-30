@@ -7,5 +7,5 @@ def solution(participant, completion):
         dic[p] -= 1
     
     for name, cnt in dic.items():
-    	if cnt == 1:
+    	if cnt > 0:
         	return name
